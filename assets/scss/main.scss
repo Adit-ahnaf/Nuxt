@@ -1,0 +1,34 @@
+@import  '@/assets/scss/base.scss';
+@import  '@/assets/scss/typography.scss';
+// @forward 'variable.scss';
+
+
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 25px;
+    // background-color: $colorGrey;
+}
+
+.btn{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 16px;
+    font-family: "";
+
+    &--menu{
+        padding: 15px 30px;
+        background-color: $colorWhite;
+        border-radius: 12px;
+        border: 1px solid $colorBlack;
+        font-family: $fontOpensans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+
+    }
+}

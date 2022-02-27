@@ -1,0 +1,23 @@
+// @forward 'variable.scss';
+.title{
+    font-family: none;
+    font-weight: none;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+
+.text{
+    font-family: none;
+    font-weight: none;
+    font-size: 0px;
+    line-height: 0px;
+
+    &--menu{
+        font-family: $fontOpensans;
+        // color:$colorGrey;
+        font-weight: none;
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
