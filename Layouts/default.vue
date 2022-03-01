@@ -1,9 +1,9 @@
 <template>
   <div>
-      <!-- <TheHeader/> -->
-      <TheSidebar/>
+      <TheHeader @open="openDrawer"/>
+      <TheSidebar :drawer="drawer" @close="closeDrawer"/>
       <div class="main">
-         <nuxt />
+         <nuxt/>
       </div>
       
   </div>
@@ -13,10 +13,23 @@
 import TheHeader from '@/components/layouts/TheHeader'
 import TheSidebar from '@/components/layouts/TheSidebar'
 
+
 export default {
+    data: () => ({
+        drawer: false,
+    }),
     components: {
         TheHeader,
-        TheSidebar
+        TheSidebar,
+    },
+    methods: {
+        openDrawer() {
+            this.drawer = true
+            console.log(this.drawer)
+        },
+        closeDrawer() {
+            this.drawer = false
+        }
     }
 
 }

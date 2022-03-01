@@ -1,9 +1,117 @@
 // @forward 'variable.scss';
 .title{
+
     font-family: none;
     font-weight: none;
     font-size: 0px;
     line-height: 0px;
+    &--homeheroh3{
+        font-family: $fontPoppins;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600px;
+        color:$colorOrange;
+
+        @media screen and (max-width:714px){
+            font-size: 20px;
+            line-height: 25px;
+            }
+          
+
+    }
+    &--homeheroh1{
+        font-family: $fontPoppins;
+        font-size: 84px;
+        line-height: 89px;
+        font-weight: 600px;
+        color:$colorTitle;
+        @media screen and (max-width:1440px){
+            font-size: 50px;
+            line-height: 75px;
+            }
+        @media screen and (max-width:714px){
+            font-size: 40px;
+            line-height: 50px;
+            }
+           
+    }
+    &--homeherop{
+        font-family: $fontPoppins;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500px;
+        color:$titleColor;
+        @media screen and (max-width:714px){
+            font-size: 10px;
+            line-height: 20px;
+            
+            } 
+
+    }
+
+    &--cat{
+        font-family: $fontPoppins;
+        font-size: 50px;
+        line-height: 89px;
+        font-weight: 600px;
+        color:$colorTitle;
+        @media screen and (max-width:714px){
+            font-size: 40px;
+            line-height: 50px;
+            }
+    }
+
+    &--cathead{
+        font-family:$fontOpensans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        
+        
+    }
+
+    &--catdes{
+        font-family: $fontPoppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    &--selhead{
+        font-family:$fontPoppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        @media screen and (max-width:714px){
+            font-size: 15px;
+            line-height: 50px;
+            }
+    }
+
+    &--easy{
+        font-family: $fontVolkov;
+        font-style: normal;
+        font-weight: 600px;
+        font-size: 50px;
+        line-height: 64px;
+        color: $colorTitle;
+        @media screen and (max-width:714px){
+            font-size: 30px;
+            line-height: 50px;
+            }
+    }
+    &--card{
+        font-family: $fontPoppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 124.5%;
+    }
+    
+    
+    
 }
 
 
@@ -15,9 +123,15 @@
 
     &--menu{
         font-family: $fontOpensans;
-        // color:$colorGrey;
         font-weight: none;
         font-size: 17px;
         line-height: 22px;
     }
+    &--category{
+        font-family: $fontPoppins;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: $titleColor;
+            }
 }

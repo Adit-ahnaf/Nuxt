@@ -31,4 +31,69 @@
         line-height: 22px;
 
     }
+    &--hero1{
+        padding: 15px 30px;
+        background-color: $buttonColor;
+        border-radius: 12px;
+        font-family: $fontOpensans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        @media screen and (max-width:714px){
+            padding: 5px 10px;
+            font-size: 10px;
+            } 
+    }
+    &--hero2{
+
+        background-color: $colorOrange;
+        border-radius: 50%;
+        font-family: $fontOpensans;
+        font-style: normal;
+        font-weight: 500;
+        height: 40px;
+        width: 40px;
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width:714px){
+            // //padding: 5px 10px;
+            // font-size: 10px;
+            height: 30px;
+            width: 30px;
+
+            }
+    }
+
+    &--easy{
+        background-color: $colorWhite;
+        border-radius: 50%;
+        font-family: $fontOpensans;
+        font-style: normal;
+        font-weight: 500;
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--plan{
+        background-color: $buttonColor;
+        border-radius: 20%;
+        font-family: $fontOpensans;
+        font-style: normal;
+        font-weight: 500;
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
 }

@@ -1,8 +1,8 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" :class="{'active': drawer}">
       <div class="sidebar__header">
         <img src="/images/Logo.png" alt="" class="sidebar__logo">
-        <img src="/icons/close.svg" alt="" class="sidebar__icon">
+        <img src="/icons/close.svg" alt="" class="sidebar__icon" @click="$emit('close')">
       </div>
 
       <div class="sidebar__menu sdmenu">
@@ -18,6 +18,12 @@
 
 <script>
 export default {
+    props: {
+        drawer: {
+            type: Boolean,
+            default: false
+        }
+    },
     data(){
         return{
             slidelistitem:[
@@ -34,14 +40,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.active {
+    transform: translateX(0) !important;
+}
 .sidebar{
     position: fixed;
     top:0px;
     right: 0;
     width: 100vw;
     height: 100vh;
-    margin: 20px 0 ;
-    padding: 0 20px;
+   // margin: 20px 0 ;
+    padding: 20px 20px;
+    background-color: $colorWhite;
+    transform: translateX(-100%);
+
     
     &__header{
         display:flex;

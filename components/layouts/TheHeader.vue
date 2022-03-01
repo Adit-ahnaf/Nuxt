@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-      <div class="header">
+  <div class="header">
+      <div class="container header__wraper">
           <div class="header__logo">
               <img src="/images/Logo.png" alt="" class="header__logo__img">
           </div>
           <div class="header__menu d-flex">
               <ul class="header__menu__list mlist">
                   <li class="mlist__item" v-for="(item,index) in mlistitem" :key="index">
-                      <nuxt-link class="mlist__item__link text text--menu" to="#">{{item.itemname}}</nuxt-link>
+                      <nuxt-link class="mlist__item__link text text--menu" :to="item.itemname.toLowerCase()">{{item.itemname}}</nuxt-link>
                   </li>
               </ul>
               <button class="mlist__button btn btn--menu">Sign up</button>
@@ -24,7 +24,7 @@
               </div>
           </div>
 
-          <div class="header__mblmenu">
+          <div class="header__mblmenu" @click="slideOpen">
               <img src="/icons/hamberger.svg" alt="" class="header__mblmenu__img">
           </div>
 
@@ -34,12 +34,16 @@
 </template>
 
 <script>
+import TheSidebar from '@/components/layouts/TheSidebar';
 export default {
+components:{
+    TheSidebar
+},    
 data(){
     return{
         mlistitem:[
             {itemname:"Destinations"},
-            {itemname:"Hotels"},
+            {itemname:"about"},
             {itemname:"Flights"},
             {itemname:"bookings"},
             {itemname:"Login"}
@@ -56,17 +60,34 @@ methods:{
     selectLanguage(data){
         this.selected = data
 
+    },
+    slideOpen(){
+        this.$emit('open')
     }
+
 } 
 }
 </script>
 
 <style lang="scss">
 .header{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    align-items: center;
+    &__wraper {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        align-items: center;
+        padding: 10px 10px;
+
+    @media screen and (max-width: 414px) {
+        position: fixed;
+        column-gap: 254px;
+        background-color: beige;
+        margin: 0px;
+        z-index: 9;
+        
+        
+    }
+    }
 
     &__menu {
         @media screen and (max-width: 991px) {
